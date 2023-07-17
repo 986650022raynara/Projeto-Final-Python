@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv
+import streamlit as st
 
 
 df = pd.read_csv('prices.csv')
@@ -11,6 +12,6 @@ df['adjusted'] = df['adjusted'].astype('float')
 
 df.plot.bar(x='adjusted', y='date')
 
-plt.title('Valores Atualizados')
+plt.title('Adjusted Prices')
 
-plt.show()
+st.plt.show()
